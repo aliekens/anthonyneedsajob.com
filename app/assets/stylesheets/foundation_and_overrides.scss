@@ -1049,3 +1049,7 @@ a.brown { color: $brown; }
 a, input { border:none  !important;}
 input.large { font-size: 1.5em;}
 span.large { font-size: 1.5em;}
+
+input[type=submit].button {
+-webkit-appearance: none;
+}
