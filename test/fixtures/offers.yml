@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  challenge: MyString
+  requirement: MyString
+  budget: MyString
+  organization: MyString
+  name: MyString
+  email: MyString
+  phone: MyString
+
+two:
+  challenge: MyString
+  requirement: MyString
+  budget: MyString
+  organization: MyString
+  name: MyString
+  email: MyString
+  phone: MyString

@@ -1,5 +1,4 @@
 <div class="bg_white band">
-	
 	<div class="row">
 	  <div class="large-4 columns text-center toppadding">
 		<h4>Anthony is in between adventures ...</h4>
@@ -7,7 +6,7 @@
 	  <div class="large-4 columns text-center toppadding">
 		<img src="/assets/head.svg" type="image/svg+xml"/>
 	  </div>
-	  <div class="large-4 columns text-center toppadding">
+	  <div class="large-4 columns text-center toppadding" style="height:100px;">
 		<h4><span id="buthis"></span></h4>
 	  </div>
 	</div>
@@ -16,7 +15,7 @@
 <div class="bg_blue band">
 	
 	<div class="row">
-	  <div class="large-11 large-centered columns text-center"><h1 class="color_brown">#AnthonyNeedsAJob</h1></div>
+	  <div class="large-11 large-centered columns text-center"><h2 class="color_brown">#AnthonyNeedsAJob</h2></div>
 	</div>
 	
 </div>
@@ -194,11 +193,11 @@
 	</div>
 </div>
 
-<form class="toppadding">
+<%= form_tag "/welcome/newoffer", class: "toppadding", remote: true do |f| %>
     <div class="row">
       <div class="large-12 columns">
         <p class="color_brown">Here's you chance to hire Anthony! Describe the project you want to tackle with Anthony (<span id="counter"></span> characters remaining)</p>
-        <input type="text" placeholder="The sky is NOT the limit" id="140chars" class="large">
+        <%= text_field_tag 'challenge', nil, placeholder: "The sky is NOT the limit", id: "140chars", class: "large" %>
       </div>
     </div>
 
@@ -206,12 +205,12 @@
       <div class="large-6 columns">
 		<h4>Requirement</h4>
         <label class="color_brown">How many Full Time Anthony days (8 hours) do you need?</label>
-        <input type="text" placeholder="10 days">
+        <%= text_field_tag 'requirement', nil, placeholder: "10 days" %>
       </div>
       <div class="large-6 columns">
 		<h4>Budget</h4>
         <label class="color_brown">How much do you want to spend on Anthony?</label>
-        <input type="text" placeholder="Be an honest altruist">
+        <%= text_field_tag 'budget', nil, placeholder: "Be an honest altruist" %>
       </div>
     </div>
 
@@ -224,29 +223,29 @@
     <div class="row">
       <div class="large-6 columns">
         <label class="color_brown">Who do you represent?</label>
-        <input type="text" placeholder="Your organization">
+        <%= text_field_tag 'organization', nil, placeholder: "Your organization" %>
       </div>
       <div class="large-6 columns">
         <label class="color_brown">What is your name?</label>
-        <input type="text" placeholder="Your name">
+        <%= text_field_tag 'name', nil, placeholder: "Your name" %>
       </div>
     </div>
 
     <div class="row">
       <div class="large-6 columns">
         <label class="color_brown">What is your e-mail address?</label>
-        <input type="text" placeholder="your@email.address">
+        <%= text_field_tag 'email', nil, placeholder: "your@email.address" %>
       </div>
       <div class="large-6 columns">
         <label class="color_brown">What is your phone number?</label>
-        <input type="text" placeholder="+1 234 56 78 90">
+        <%= text_field_tag 'phone', nil, placeholder: "+1 234 56 78 90" %>
       </div>
     </div>
 
     <div class="row">
       <div class="large-12 columns">
 			<h4>Go!</h4>
-			<a href="#" class="primary large button expand color_brown">Submit your challenge to Anthony!</a>
+			<%= submit_tag 'Submit your challenge!', class: "primary large button expand color_brown", id: "formsubmit" %>
       </div>
     </div>
 
@@ -263,7 +262,7 @@
       </div>
     </div>
 
-</form>
+<% end %>
 
 <div class="bg_creme band" id="share">
 	<div class="row">
@@ -276,7 +275,7 @@
 		<a href="https://plus.google.com/share?url=http://AnthonyNeedsAJob.com" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">	
 			<span>
 				<img src="/assets/google_white.svg" type="image/svg+xml" />
-				<h3 class="color_white">Share on Google+</h3>
+				<h4 class="color_white">Share on Google+</h4>
 			</span>
 		</a>
 	  </div>
@@ -284,7 +283,7 @@
 		<a href="https://twitter.com/share?url=http://AnthonyNeedsAJob.com" target="_blank">
 			<span>
 				<img src="/assets/twitter_white.svg" type="image/svg+xml" />
-				<h3 class="color_white">Share on Twitter</h3>
+				<h4 class="color_white">Share on Twitter</h4>
 			</span>
 		</a>
 	  </div>
@@ -292,37 +291,39 @@
 		<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FAnthonyNeedsAJob.com', 'facebook-share-dialog', 'width=626,height=436'); return false;">
 			<span>
 				<img src="/assets/facebook_white.svg" type="image/svg+xml" />
-				<h3 class="color_white">Share on Facebook</h3>
+				<h4 class="color_white">Share on Facebook</h4>
 			</span>
 		</a>
 	  </div>
 	</div>
 </div>
 
-<div class="bg_pink" style="padding:20px 20px 40px 20px;" id="share">
+<div class="bg_pink band" id="share">
 	<div class="row">
 	  <div class="large-12 columns">
 		<h2>Find Anthony online</h2>
 	  </div>
+	</div>
+	<div class="row">
 	  <div class="large-3 columns text-center">
 		<a href="http://anthony.liekens.net" target="_blank">
-			<img src="/assets/home_white.svg" type="image/svg+xml" width="133"/>
+			<img src="/assets/home_white.svg" type="image/svg+xml" width="133"/><p/>
 		</a>
 	  </div>
 	  <div class="large-3 columns text-center">
 		<a href="http://www.linkedin.com/profile/view?id=9742547" target="_blank">
 			<img src="/assets/linkedin_white.svg" type="image/svg+xml" width="133"/>
-		</a>
+		</a><p/>
 	  </div>
 	  <div class="large-3 columns text-center">
 		<a href="https://plus.google.com/u/0/109420283197516932948/posts" target="_blank">
 			<img src="/assets/google_white.svg" type="image/svg+xml" width="133"/>
-		</a>
+		</a><p/>
 	  </div>
 	  <div class="large-3 columns text-center">
 		<a href="http://twitter.com/aliekens" target="_blank">
 			<img src="/assets/twitter_white.svg" type="image/svg+xml" width="133"/>
-		</a>
+		</a><p/>
 	  </div>
 	</div>
 </div>
@@ -339,4 +340,52 @@
 		<label class="color_white">Built with Ruby On Rails and Foundation</label>
 	  </div>
 	</div>
+</div>
+
+<div id="myModal" class="reveal-modal">
+	<div class="row">
+	  <div class="large-12 columns">
+		<h2>Thank you for submitting a challenge</h2>
+		<p class="lead">Anthony has been notified of your challenge. He will respond to your suggestion as soon as possible.</p>
+		<p>If you want to contact Anthony directly, you can always <a href="mailto:anthony@liekens.net" class="color_brown underline">send him an e-mail.</a></p>
+		<label class="color_brown">	
+			Only serious and honest inquiries will be considered and replied to. 
+			This confimration does not guarantee an actual agreement. 
+		</label>
+	  </div>
+	</div>
+	
+	<div class="row">
+	  <div class="large-12 columns">
+		<h3>Please, share #AnthonyNeedsAJob!</h3>
+	  </div>
+	</div>
+	<div class="row toppadding">
+	  <div class="large-4 columns text-center">
+		<a href="https://plus.google.com/share?url=http://AnthonyNeedsAJob.com" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">	
+			<span>
+				<img src="/assets/google_white.svg" type="image/svg+xml" />
+				<h4 class="color_white">Share on Google+</h4>
+			</span>
+		</a>
+	  </div>
+	  <div class="large-4 columns text-center">
+		<a href="https://twitter.com/share?url=http://AnthonyNeedsAJob.com" target="_blank">
+			<span>
+				<img src="/assets/twitter_white.svg" type="image/svg+xml" />
+				<h4 class="color_white">Share on Twitter</h4>
+			</span>
+		</a>
+	  </div>
+	  <div class="large-4 columns text-center">
+		<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FAnthonyNeedsAJob.com', 'facebook-share-dialog', 'width=626,height=436'); return false;">
+			<span>
+				<img src="/assets/facebook_white.svg" type="image/svg+xml" />
+				<h4 class="color_white">Share on Facebook</h4>
+			</span>
+		</a>
+	  </div>
+	</div>
+
+	<a class="close-reveal-modal"><span class="color_brown large">&#215;</span></a>
 </div>

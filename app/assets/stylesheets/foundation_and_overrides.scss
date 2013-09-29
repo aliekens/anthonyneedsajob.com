@@ -784,7 +784,7 @@ $f-dropdown-bg: $white;
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
-// $reveal-modal-bg: $white;
+$reveal-modal-bg: $blue;
 // $reveal-position-top: 50px;
 // $reveal-default-width: 80%;
 // $reveal-modal-padding: emCalc(20px);
@@ -1048,3 +1048,4 @@ a.brown { color: $brown; }
 
 a, input { border:none  !important;}
 input.large { font-size: 1.5em;}
+span.large { font-size: 1.5em;}
